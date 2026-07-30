@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="منيو برفكتو الرقمي لعرض المنتجات والأسعار فقط.">
+  <title>Perfecto Tebo | منيو برفكتو</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-index-page>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="بيرفكتو ماركت">
+      <img class="brand-logo" src="assets/images/logo.png" alt="برفكتو">
+      <span class="brand-text">
+        <strong>برفكتو</strong>
+        <small>Perfecto</small>
+      </span>
+    </a>
+    <nav class="category-nav" data-header-categories></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/images/storefront-hero.png" alt="واجهة بيرفكتو ماركت" class="hero-image">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-logo" aria-label="برفكتو">
+          <img src="assets/images/logo.png" alt="برفكتو">
+        </div>
+        <h1>أحدث المنتجات والأسعار في مكان واحد</h1>
+        <p>تصفح منتجات برفكتو بسرعة واعرف الأسعار قبل ما تختار.</p>
+        <form class="search-panel" role="search">
+          <label class="sr-only" for="searchInput">ابحث عن منتج</label>
+          <span class="icon" data-icon="search" aria-hidden="true"></span>
+          <input id="searchInput" data-search type="search" placeholder="ابحث باسم المنتج..." autocomplete="off">
+          <button type="button" data-clear-search aria-label="مسح البحث">
+            <span class="icon" data-icon="x" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="catalog-shell products-section" aria-labelledby="productsTitle">
+      <div class="section-heading">
+        <p data-results-count>جاري تحميل المنتجات...</p>
+        <h2 id="productsTitle">المنتجات</h2>
+      </div>
+      <div class="product-grid" id="products" data-products></div>
+      <div class="empty-state" data-empty hidden>
+        <span class="icon" data-icon="search" aria-hidden="true"></span>
+        <h3>لا توجد منتجات مطابقة</h3>
+        <p>جرّب البحث بكلمة مختلفة أو اختر قسم آخر.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>برفكتو</strong>
+    <span>منيو أسعار رقمي فقط، بدون طلبات أو دفع إلكتروني.</span>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

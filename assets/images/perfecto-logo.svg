@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="title">
+  <title id="title">برفكتو</title>
+  <defs>
+    <linearGradient id="red" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#c70b34"/>
+      <stop offset="1" stop-color="#ad263c"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1f7f31"/>
+      <stop offset="1" stop-color="#3e8e41"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="330" rx="26" fill="#fff"/>
+  <path d="M575 118C615 42 720 25 795 80c-58-15-125-3-172 38 48-24 103-20 150 10 12 8 23 18 33 29 2-28-8-55-30-78 60 38 84 96 72 157-33-75-123-113-199-82-15 6-30 15-43 26-10-25-20-43-31-62Z" fill="url(#green)"/>
+  <path d="M660 135c39-31 77-33 117-20-27 16-57 29-92 34-9 15-23 28-41 38 2-20 7-37 16-52Z" fill="url(#green)"/>
+  <text x="450" y="230"
+        text-anchor="middle"
+        direction="rtl"
+        unicode-bidi="bidi-override"
+        font-family="Cairo, Tajawal, Arial, sans-serif"
+        font-size="188"
+        font-weight="900"
+        letter-spacing="0"
+        fill="url(#red)">برفكتو</text>
+</svg>

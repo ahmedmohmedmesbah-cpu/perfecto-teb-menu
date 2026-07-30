@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "marketNameAr": "برفكتو",
+    "marketNameEn": "PERFECTO TEBO",
+    "currency": "جنيه",
+    "lastUpdated": "2026-07-30"
+  },
+  "categories": [
+    {
+      "id": "produce",
+      "name": "خضار وفاكهة",
+      "icon": "apple"
+    },
+    {
+      "id": "dairy",
+      "name": "ألبان وجبن",
+      "icon": "milk"
+    },
+    {
+      "id": "frozen",
+      "name": "مجمدات",
+      "icon": "snow"
+    },
+    {
+      "id": "pantry",
+      "name": "بقالة",
+      "icon": "can"
+    },
+    {
+      "id": "cleaning",
+      "name": "منظفات",
+      "icon": "sparkles"
+    }
+  ],
+  "products": [
+    {
+      "id": "banana-kg",
+      "categoryId": "produce",
+      "name": "موز بلدي",
+      "price": 38,
+      "unit": "كيلو",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "apple-red-kg",
+      "categoryId": "produce",
+      "name": "تفاح أحمر",
+      "price": 95,
+      "unit": "كيلو",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "tomato-kg",
+      "categoryId": "produce",
+      "name": "طماطم",
+      "price": 18,
+      "unit": "كيلو",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "milk-liter",
+      "categoryId": "dairy",
+      "name": "لبن كامل الدسم",
+      "price": 42,
+      "unit": "لتر",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "cheese-white-kg",
+      "categoryId": "dairy",
+      "name": "جبنة بيضاء",
+      "price": 185,
+      "unit": "كيلو",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "yogurt-cup",
+      "categoryId": "dairy",
+      "name": "زبادي",
+      "price": 8,
+      "unit": "قطعة",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "chicken-nuggets",
+      "categoryId": "frozen",
+      "name": "ناجتس دجاج",
+      "price": 165,
+      "unit": "عبوة",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "okra-frozen",
+      "categoryId": "frozen",
+      "name": "بامية مجمدة",
+      "price": 48,
+      "unit": "عبوة",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "rice-kg",
+      "categoryId": "pantry",
+      "name": "أرز مصري",
+      "price": 34,
+      "unit": "كيلو",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "sugar-kg",
+      "categoryId": "pantry",
+      "name": "سكر أبيض",
+      "price": 36,
+      "unit": "كيلو",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "dish-soap",
+      "categoryId": "cleaning",
+      "name": "سائل غسيل أطباق",
+      "price": 55,
+      "unit": "زجاجة",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "laundry-powder",
+      "categoryId": "cleaning",
+      "name": "مسحوق غسيل",
+      "price": 120,
+      "unit": "عبوة",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    }
+  ]
+}
