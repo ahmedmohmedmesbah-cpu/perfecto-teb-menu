@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "marketNameAr": "برفكتو",
+    "marketNameEn": "PERFECTO TEBO",
+    "currency": "جنيه",
+    "lastUpdated": "2026-08-21"
+  },
+  "categories": [
+    {
+      "id": "frozen",
+      "name": "مجمدات",
+      "icon": "snow"
+    },
+    {
+      "id": "pantry",
+      "name": "بقالة",
+      "icon": "can"
+    },
+    {
+      "id": "جبن-و-البان",
+      "name": "جبن و البان",
+      "icon": "can"
+    }
+  ],
+  "products": [
+    {
+      "id": "3045",
+      "name": "جبنه  كيري  بالشيدر 1 ك",
+      "price": 250.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    }
+  ]
+}

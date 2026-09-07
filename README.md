@@ -67,6 +67,7 @@ GitHub Pages will serve `index.html` automatically.
 ## Notes
 
 - The real storefront photo is saved in `assets/images/storefront-hero.png`.
+- The fast-loading homepage hero is saved in `assets/images/storefront-hero.webp`.
 - The clean logo used by the website is saved in `assets/images/logo.png`.
 - Replace these files later with higher-resolution official assets if needed, keeping the same filenames.
 - The site is intentionally vanilla HTML, CSS, and JavaScript for simple free hosting.

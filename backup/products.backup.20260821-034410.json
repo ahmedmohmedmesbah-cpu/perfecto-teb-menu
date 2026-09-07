@@ -1,0 +1,685 @@
+{
+  "meta": {
+    "marketNameAr": "برفكتو",
+    "marketNameEn": "PERFECTO TEBO",
+    "currency": "جنيه",
+    "lastUpdated": "2026-08-21"
+  },
+  "categories": [
+    {
+      "id": "frozen",
+      "name": "مجمدات",
+      "icon": "snow"
+    },
+    {
+      "id": "pantry",
+      "name": "بقالة",
+      "icon": "can"
+    },
+    {
+      "id": "cleaning",
+      "name": "منظفات",
+      "icon": "sparkles"
+    }
+  ],
+  "products": [
+    {
+      "id": "laundry-powder",
+      "categoryId": "cleaning",
+      "name": "مسحوق غسيل",
+      "price": 120,
+      "unit": "عبوة",
+      "image": "",
+      "status": "متوفر",
+      "available": true
+    },
+    {
+      "id": "لانشون",
+      "name": "لانشون",
+      "price": 305.0,
+      "unit": "كيلو",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "عسل",
+      "name": "عسل",
+      "price": 140.0,
+      "unit": "علبه",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "برجر-فراخ",
+      "name": "برجر فراخ",
+      "price": 105.0,
+      "unit": "كيلو",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14001",
+      "name": "زيتون شرائح400جم",
+      "price": 65.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14002",
+      "name": "زيتون اخضرتفاحه400جم",
+      "price": 75.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14004",
+      "name": "خيارقشه 400جم",
+      "price": 95.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14005",
+      "name": "ليمون مخلل 400جم",
+      "price": 40.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14006",
+      "name": "فلفل مكسيكي 400جم",
+      "price": 35.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14008",
+      "name": "زيتون اسبانى400جم",
+      "price": 75.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14009",
+      "name": "بصل مخلل400جم",
+      "price": 45.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14012",
+      "name": "زيتون اسباني 800جم",
+      "price": 120.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14013",
+      "name": "زيتون شرائح 800جم",
+      "price": 115.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "14019",
+      "name": "مخلل مشكل400جم",
+      "price": 25.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "17001",
+      "name": "عيش حبة كامله",
+      "price": 20.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2001",
+      "name": "سجق 350ج",
+      "price": 105.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2002",
+      "name": "كفته 350ج",
+      "price": 95.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2003",
+      "name": "برجر400 جم",
+      "price": 105.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2007",
+      "name": "سجق فراخ 500ج",
+      "price": 110.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2008",
+      "name": "كفته فراخ 500ج",
+      "price": 105.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2009",
+      "name": "برجر فراخ 500ج",
+      "price": 105.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2010",
+      "name": "كفتة ارز 500ج",
+      "price": 130.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2012",
+      "name": "سوسيس لحم 500 ج",
+      "price": 165.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2013",
+      "name": "سوسيس فراخ 500 ج",
+      "price": 130.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2015",
+      "name": "لحم مفروم هندي صافي 500 جرام",
+      "price": 160.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "2016",
+      "name": "استربس فراخ 400جم",
+      "price": 160.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3018",
+      "name": "جبنة موزاريلا طبيعي 1ك",
+      "price": 240.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3024",
+      "name": "جبنة موزاريلا 500ج",
+      "price": 140.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3019",
+      "name": "موزاريلا طبيعي 200 جم",
+      "price": 60.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3040",
+      "name": "لبن جاموسي",
+      "price": 38.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3053",
+      "name": "لبن بقرى",
+      "price": 25.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3014",
+      "name": "زبادى الاصدقاء 180 ج",
+      "price": 16.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3015",
+      "name": "زبادي الاصدقاء 110 ج",
+      "price": 11.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3041",
+      "name": "ارزبلبن110",
+      "price": 12.5,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3042",
+      "name": "ارزبلبن200",
+      "price": 20.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3048",
+      "name": "زبدة جاموسى 1ك",
+      "price": 280.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6004",
+      "name": "زبدة بقري 1 ك",
+      "price": 260.0,
+      "unit": "وحدة",
+      "categoryId": "frozen",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6001",
+      "name": "سمن جموسي 400ج",
+      "price": 200.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6002",
+      "name": "سمن جموسي 900ج",
+      "price": 420.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6010",
+      "name": "سمن بقري 900جم",
+      "price": 360.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3039",
+      "name": "سمن بقري طبيعي 400 جرام",
+      "price": 170.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3034",
+      "name": "جبنه كيري بالقشطه طبيعي 1ك",
+      "price": 245.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3035",
+      "name": "جبنه كيري بالقشطة طبيعي  500 جم",
+      "price": 125.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3037",
+      "name": "جبنه كيري بالقشطة طبيعي 300جم",
+      "price": 75.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3043",
+      "name": "جبنه كيري بالشيدر طبيعي 300 جم",
+      "price": 80.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3044",
+      "name": "جبنه سبريد كريمي بالشيدر 500 جرام",
+      "price": 130.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3045",
+      "name": "جبنه  كيري  بالشيدر 1 ك",
+      "price": 250.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "7005",
+      "name": "زبدة فول سودانى 250جم",
+      "price": 50.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "7006",
+      "name": "زبدة فول سودانى 500جم",
+      "price": 100.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5003",
+      "name": "عسل اسود 750ج",
+      "price": 55.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5006",
+      "name": "عسل نحل اثل 500ج",
+      "price": 130.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5007",
+      "name": "عسل اسوء 1.5 ك",
+      "price": 100.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5008",
+      "name": "عسل اسود 350جم",
+      "price": 35.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5002",
+      "name": "عسل نحل موالح 500جم",
+      "price": 130.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5009",
+      "name": "عسل نحل برسيم 500 جم",
+      "price": 110.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "5012",
+      "name": "عسل نحل سدر مصري 500 جم",
+      "price": 190.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6003",
+      "name": "زيت زيتون 250 ج",
+      "price": 140.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6006",
+      "name": "زيت زيتون 530 ملي",
+      "price": 270.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "6007",
+      "name": "زيت زيتون 930ملي",
+      "price": 460.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "7008",
+      "name": "كرتونة رطب سكري",
+      "price": 450.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "8001",
+      "name": "بيض ابيض",
+      "price": 4.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "8002",
+      "name": "بيض احمر",
+      "price": 4.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "8003",
+      "name": "بيض بلدي فلاحي",
+      "price": 5.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12001",
+      "name": "فستق امريكي 200 جم",
+      "price": 195.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12002",
+      "name": "كاجو جامبو 250 جم",
+      "price": 225.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12004",
+      "name": "عين جمل 200جم",
+      "price": 140.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12005",
+      "name": "لوز محمص 125 جم",
+      "price": 110.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12006",
+      "name": "بندق محمص 125 جم",
+      "price": 150.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12007",
+      "name": "مكسرات مشكل 250 جم",
+      "price": 200.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "11002",
+      "name": "لوليتا قطع بندق900جم",
+      "price": 220.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12012",
+      "name": "جلادنس قطع بندق330جم",
+      "price": 215.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "12013",
+      "name": "جلادنس سبريدبندق330جم",
+      "price": 175.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "18006",
+      "name": "جلادنس سبريد نباتي 330 جم",
+      "price": 150.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    }
+  ]
+}

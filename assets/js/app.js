@@ -24,7 +24,6 @@
     clearSearch: document.querySelector("[data-clear-search]"),
     empty: document.querySelector("[data-empty]"),
     resultsCount: document.querySelector("[data-results-count]"),
-    categoryTitle: document.querySelector("[data-category-title]")
   };
 
   document.querySelectorAll("[data-icon]").forEach((node) => {
@@ -44,14 +43,6 @@
     return new Intl.NumberFormat("ar-EG", { maximumFractionDigits: 2 }).format(value);
   }
 
-  function getParam(name) {
-    return new URLSearchParams(window.location.search).get(name);
-  }
-
-  function productCount(categoryId) {
-    return state.data.products.filter((item) => item.categoryId === categoryId).length;
-  }
-
   function categoryById(id) {
     return state.data.categories.find((cat) => cat.id === id);
   }
@@ -66,9 +57,8 @@
 
   function headerCategoryLink(category) {
     const active = category.id === state.activeCategory ? " active" : "";
-    const url = category.id === "all" ? "index.html" : `category.html?category=${category.id}`;
     return `
-      <a class="category-link${active}" href="${url}">
+      <a class="category-link${active}" href="#" data-category-id="${category.id}">
         ${category.name}
       </a>
     `;
@@ -129,25 +119,6 @@
     `;
   }
 
-  function setupCategoryPage() {
-    const categoryId = getParam("category");
-    if (!document.body.hasAttribute("data-category-page")) return;
-
-    state.activeCategory = categoryId;
-    const category = categoryById(state.activeCategory);
-
-    if (!category) {
-        // Redirect to home if category is invalid or not found
-        window.location.replace('index.html');
-        return;
-    }
-
-    if (els.categoryTitle) {
-      els.categoryTitle.textContent = category.name;
-      document.title = `${category.name} | Perfecto Tebo`;
-    }
-  }
-
   function render() {
     renderHeaderCategories();
     renderProducts();
@@ -159,11 +130,7 @@
       if (!response.ok) throw new Error("Data file not found");
       state.data = await response.json();
       
-      if (document.body.hasAttribute('data-category-page')) {
-        setupCategoryPage();
-      } else {
-        state.activeCategory = 'all';
-      }
+      state.activeCategory = 'all';
       render();
     } catch (error) {
       if (els.resultsCount) els.resultsCount.textContent = "تعذر تحميل ملف المنتجات.";
@@ -172,6 +139,15 @@
       console.error(error);
     }
   }
+
+  els.headerCategories?.addEventListener("click", (event) => {
+    const link = event.target.closest(".category-link");
+    if (link && link.dataset.categoryId) {
+      event.preventDefault();
+      state.activeCategory = link.dataset.categoryId;
+      render();
+    }
+  });
 
   els.search?.addEventListener("input", (event) => {
     state.query = event.target.value;

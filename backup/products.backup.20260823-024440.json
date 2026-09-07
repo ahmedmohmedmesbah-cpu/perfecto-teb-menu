@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "marketNameAr": "برفكتو",
+    "marketNameEn": "PERFECTO TEBO",
+    "currency": "جنيه",
+    "lastUpdated": "2026-08-21"
+  },
+  "categories": [
+    {
+      "id": "frozen",
+      "name": "مجمدات",
+      "icon": "snow"
+    },
+    {
+      "id": "جبن-و-البان",
+      "name": "جبن و البان",
+      "icon": "can"
+    },
+    {
+      "id": "لانشون",
+      "name": "لانشون",
+      "icon": "can"
+    },
+    {
+      "id": "مكسرات",
+      "name": "مكسرات",
+      "icon": "can"
+    },
+    {
+      "id": "مخللات",
+      "name": "مخللات",
+      "icon": "can"
+    }
+  ],
+  "products": []
+}

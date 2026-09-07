@@ -1,3 +1,8 @@
 __pycache__/
 *.py[cod]
 data/*.backup-*.json
+logs/*.log
+logs/*.log.*
+launcher/bin/
+launcher/obj/
+perfecto_launcher_error.txt

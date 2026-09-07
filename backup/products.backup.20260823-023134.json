@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "marketNameAr": "برفكتو",
+    "marketNameEn": "PERFECTO TEBO",
+    "currency": "جنيه",
+    "lastUpdated": "2026-08-21"
+  },
+  "categories": [
+    {
+      "id": "frozen",
+      "name": "مجمدات",
+      "icon": "snow"
+    },
+    {
+      "id": "pantry",
+      "name": "بقالة",
+      "icon": "can"
+    },
+    {
+      "id": "جبن-و-البان",
+      "name": "جبن و البان",
+      "icon": "can"
+    }
+  ],
+  "products": [
+    {
+      "id": "3040",
+      "name": "لبن جاموسي",
+      "price": 38.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3053",
+      "name": "لبن بقرى",
+      "price": 25.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3014",
+      "name": "زبادى الاصدقاء 180 ج",
+      "price": 16.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3015",
+      "name": "زبادي الاصدقاء 110 ج",
+      "price": 11.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3041",
+      "name": "ارزبلبن110",
+      "price": 12.5,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3042",
+      "name": "ارزبلبن200",
+      "price": 20.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3034",
+      "name": "جبنه كيري بالقشطه طبيعي 1ك",
+      "price": 245.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3035",
+      "name": "جبنه كيري بالقشطة طبيعي  500 جم",
+      "price": 125.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3037",
+      "name": "جبنه كيري بالقشطة طبيعي 300جم",
+      "price": 75.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3043",
+      "name": "جبنه كيري بالشيدر طبيعي 300 جم",
+      "price": 80.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3044",
+      "name": "جبنه سبريد كريمي بالشيدر 500 جرام",
+      "price": 130.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "3045",
+      "name": "جبنه  كيري  بالشيدر 1 ك",
+      "price": 250.0,
+      "unit": "وحدة",
+      "categoryId": "جبن-و-البان",
+      "image": "",
+      "available": true
+    },
+    {
+      "id": "18006",
+      "name": "جلادنس سبريد نباتي 330 جم",
+      "price": 150.0,
+      "unit": "وحدة",
+      "categoryId": "pantry",
+      "image": "",
+      "available": true
+    }
+  ]
+}
