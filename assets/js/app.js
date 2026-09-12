@@ -99,7 +99,7 @@
     const status = product.status || (product.available !== false ? "متوفر" : "غير موجود حاليا");
     const isUnavailable = status !== "متوفر";
     const image = product.image
-      ? `<img src="${product.image}" alt="${product.name}" loading="lazy">`
+      ? `<img src="${product.image}" alt="${product.name}" loading="lazy" decoding="async" width="900" height="900">`
       : `<div class="placeholder" aria-hidden="true">${icons[category?.icon || "basket"] || icons.basket}</div>`;
 
     return `

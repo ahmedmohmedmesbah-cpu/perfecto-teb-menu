@@ -1,8 +1,9 @@
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
-import shutil
 import re
 from pathlib import Path
+
+from PIL import Image, ImageOps
 
 from perfecto_cms.core.paths import IMAGE_DIR, PROJECT_ROOT
 from perfecto_cms.core.data import DataManager
@@ -22,23 +23,45 @@ def project_relative_path(path: Path) -> str:
     return path.resolve().relative_to(PROJECT_ROOT).as_posix()
 
 
-def unique_destination_path(source: Path) -> Path:
-    """Create a non-conflicting destination under assets/images/products."""
+def safe_image_name(value: str) -> str:
+    """Create a filesystem-safe image base name."""
+    name = re.sub(r"\s+", "-", value.strip())
+    name = re.sub(r"[^\w\-]", "", name, flags=re.UNICODE)
+    return name.lower() or "product"
+
+
+def unique_destination_path(base_name: str) -> Path:
+    """Create a non-conflicting WebP destination under assets/images/products."""
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
-    destination = IMAGE_DIR / source.name
+    destination = IMAGE_DIR / f"{base_name}.webp"
 
     if not destination.exists():
         return destination
 
-    stem = source.stem
-    suffix = source.suffix
     counter = 2
 
     while True:
-        candidate = IMAGE_DIR / f"{stem}-{counter}{suffix}"
+        candidate = IMAGE_DIR / f"{base_name}-{counter}.webp"
         if not candidate.exists():
             return candidate
         counter += 1
+
+
+def optimize_product_image(source: Path, product_name: str, product_id: str = "") -> str:
+    """Resize and compress a selected product image for fast website loading."""
+    base = safe_image_name(product_name or product_id or source.stem)
+    destination = unique_destination_path(base)
+
+    with Image.open(source) as image:
+        image = ImageOps.exif_transpose(image)
+        image.thumbnail((900, 900), Image.Resampling.LANCZOS)
+
+        if image.mode not in ("RGB", "RGBA"):
+            image = image.convert("RGBA" if "A" in image.getbands() else "RGB")
+
+        image.save(destination, "WEBP", quality=82, method=6)
+
+    return project_relative_path(destination)
 
 
 class ProductEditDialog(ctk.CTkToplevel):
@@ -250,11 +273,12 @@ class ProductEditDialog(ctk.CTkToplevel):
         source = Path(selected)
 
         try:
-            self.image_path = project_relative_path(source)
-        except ValueError:
-            destination = unique_destination_path(source)
-            shutil.copy2(source, destination)
-            self.image_path = project_relative_path(destination)
+            product_name = self.name_entry.get().strip() or self.product.get("name", "")
+            product_id = self.product.get("id", "")
+            self.image_path = optimize_product_image(source, product_name, product_id)
+        except Exception as exc:
+            messagebox.showerror("خطأ", f"فشل تجهيز الصورة: {exc}")
+            return
 
         self.image_label.configure(text=self._image_label_text())
 
