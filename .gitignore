@@ -6,3 +6,8 @@ logs/*.log.*
 launcher/bin/
 launcher/obj/
 perfecto_launcher_error.txt
+
+# Product photos should be attached from anywhere on disk.
+# The CMS writes optimized website images to assets/images/products/*.webp.
+assets/images/*.jpg
+assets/images/*.jpeg

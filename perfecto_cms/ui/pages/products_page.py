@@ -64,6 +64,16 @@ def optimize_product_image(source: Path, product_name: str, product_id: str = ""
     return project_relative_path(destination)
 
 
+def default_photo_browse_dir() -> Path:
+    """Pick a friendly start folder outside the project for choosing source photos."""
+    home = Path.home()
+    for folder_name in ("Pictures", "Downloads", "Desktop"):
+        candidate = home / folder_name
+        if candidate.exists():
+            return candidate
+    return home
+
+
 class ProductEditDialog(ctk.CTkToplevel):
     """Dialog for adding/editing products."""
 
@@ -257,10 +267,9 @@ class ProductEditDialog(ctk.CTkToplevel):
 
     def _attach_photo(self):
         """Open a file picker and attach a product photo."""
-        image_root = PROJECT_ROOT / "assets" / "images"
         selected = filedialog.askopenfilename(
             title="اختر صورة المنتج",
-            initialdir=str(image_root if image_root.exists() else PROJECT_ROOT),
+            initialdir=str(default_photo_browse_dir()),
             filetypes=[
                 ("Image Files", "*.png *.jpg *.jpeg *.webp *.gif"),
                 ("All Files", "*.*"),
