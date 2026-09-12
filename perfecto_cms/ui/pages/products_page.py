@@ -1,7 +1,10 @@
 import customtkinter as ctk
-from tkinter import messagebox, simpledialog
+from tkinter import filedialog, messagebox
+import shutil
 import re
+from pathlib import Path
 
+from perfecto_cms.core.paths import IMAGE_DIR, PROJECT_ROOT
 from perfecto_cms.core.data import DataManager
 from perfecto_cms.ui.theme import COLORS, FONT_FAMILY
 
@@ -14,19 +17,44 @@ def generate_product_id(name: str) -> str:
     return slug.lower()
 
 
+def project_relative_path(path: Path) -> str:
+    """Return a website-friendly path relative to the project root."""
+    return path.resolve().relative_to(PROJECT_ROOT).as_posix()
+
+
+def unique_destination_path(source: Path) -> Path:
+    """Create a non-conflicting destination under assets/images/products."""
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+    destination = IMAGE_DIR / source.name
+
+    if not destination.exists():
+        return destination
+
+    stem = source.stem
+    suffix = source.suffix
+    counter = 2
+
+    while True:
+        candidate = IMAGE_DIR / f"{stem}-{counter}{suffix}"
+        if not candidate.exists():
+            return candidate
+        counter += 1
+
+
 class ProductEditDialog(ctk.CTkToplevel):
     """Dialog for adding/editing products."""
 
     def __init__(self, parent, product=None, categories=None):
         super().__init__(parent)
         self.title("تحرير المنتج" if product else "إضافة منتج جديد")
-        self.geometry("500x550")
+        self.geometry("560x670")
         self.resizable(False, False)
         self.grab_set()
 
         self.product = product or {}
         self.categories = categories or []
         self.result = None
+        self.image_path = self.product.get("image", "")
 
         self._build_form()
 
@@ -128,9 +156,56 @@ class ProductEditDialog(ctk.CTkToplevel):
                 idx = category_ids.index(category_id)
                 self.category_menu.set(category_names[idx] if idx < len(category_names) else "")
 
+        # Product Image
+        ctk.CTkLabel(
+            frame,
+            text="صورة المنتج",
+            font=(FONT_FAMILY, 13, "bold"),
+            text_color=COLORS["text"],
+            anchor="e",
+        ).grid(row=8, column=0, columnspan=2, sticky="e", pady=(0, 6))
+
+        image_frame = ctk.CTkFrame(frame, fg_color=COLORS["white"], corner_radius=10)
+        image_frame.grid(row=9, column=0, columnspan=2, sticky="ew", pady=(0, 14))
+        image_frame.grid_columnconfigure(0, weight=1)
+
+        self.image_label = ctk.CTkLabel(
+            image_frame,
+            text=self._image_label_text(),
+            font=(FONT_FAMILY, 12),
+            text_color=COLORS["muted"],
+            anchor="e",
+        )
+        self.image_label.grid(row=0, column=0, sticky="ew", padx=10, pady=10)
+
+        image_buttons = ctk.CTkFrame(image_frame, fg_color="transparent")
+        image_buttons.grid(row=0, column=1, sticky="ew", padx=10, pady=10)
+
+        ctk.CTkButton(
+            image_buttons,
+            text="إرفاق صورة",
+            font=(FONT_FAMILY, 12, "bold"),
+            fg_color=COLORS["green"],
+            hover_color="#2E6B2F",
+            text_color=COLORS["white"],
+            width=100,
+            command=self._attach_photo,
+        ).grid(row=0, column=0, padx=3)
+
+        ctk.CTkButton(
+            image_buttons,
+            text="إزالة",
+            font=(FONT_FAMILY, 12, "bold"),
+            fg_color=COLORS["beige"],
+            hover_color="#C5B080",
+            text_color=COLORS["text"],
+            width=80,
+            command=self._clear_photo,
+        ).grid(row=0, column=1, padx=3)
+
         # Buttons
         button_frame = ctk.CTkFrame(frame, fg_color="transparent")
-        button_frame.grid(row=8, column=0, columnspan=2, sticky="ew", pady=(20, 0))
+        button_frame.grid(row=10, column=0, columnspan=2, sticky="ew", pady=(20, 0))
         button_frame.grid_columnconfigure((0, 1), weight=1)
 
         ctk.CTkButton(
@@ -152,6 +227,41 @@ class ProductEditDialog(ctk.CTkToplevel):
             text_color=COLORS["text"],
             command=self.destroy,
         ).grid(row=0, column=0, sticky="ew", padx=(0, 8))
+
+    def _image_label_text(self):
+        """Return the current image label text."""
+        return self.image_path if self.image_path else "لا توجد صورة مرفقة"
+
+    def _attach_photo(self):
+        """Open a file picker and attach a product photo."""
+        image_root = PROJECT_ROOT / "assets" / "images"
+        selected = filedialog.askopenfilename(
+            title="اختر صورة المنتج",
+            initialdir=str(image_root if image_root.exists() else PROJECT_ROOT),
+            filetypes=[
+                ("Image Files", "*.png *.jpg *.jpeg *.webp *.gif"),
+                ("All Files", "*.*"),
+            ],
+        )
+
+        if not selected:
+            return
+
+        source = Path(selected)
+
+        try:
+            self.image_path = project_relative_path(source)
+        except ValueError:
+            destination = unique_destination_path(source)
+            shutil.copy2(source, destination)
+            self.image_path = project_relative_path(destination)
+
+        self.image_label.configure(text=self._image_label_text())
+
+    def _clear_photo(self):
+        """Remove the product photo link without deleting the image file."""
+        self.image_path = ""
+        self.image_label.configure(text=self._image_label_text())
 
     def _save(self):
         """Validate and save the product."""
@@ -202,7 +312,7 @@ class ProductEditDialog(ctk.CTkToplevel):
                 "price": price,
                 "unit": unit,
                 "categoryId": self.category_ids[category_idx],
-                "image": self.product.get("image", ""),
+                "image": self.image_path,
                 "available": self.product.get("available", True),
             }
         )
