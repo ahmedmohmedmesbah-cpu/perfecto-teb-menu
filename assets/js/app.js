@@ -20,8 +20,8 @@
   const els = {
     headerCategories: document.querySelector("[data-header-categories]"),
     products: document.querySelector("[data-products]"),
-    search: document.querySelector("[data-search]"),
-    clearSearch: document.querySelector("[data-clear-search]"),
+    searches: Array.from(document.querySelectorAll("[data-search]")),
+    clearSearchButtons: Array.from(document.querySelectorAll("[data-clear-search]")),
     empty: document.querySelector("[data-empty]"),
     resultsCount: document.querySelector("[data-results-count]"),
   };
@@ -94,6 +94,16 @@
     }
   }
 
+  function syncSearchInputs(source) {
+    els.searches.forEach((input) => {
+      if (input !== source) input.value = state.query;
+    });
+  }
+
+  function updateHeaderState() {
+    document.body.classList.toggle("is-scrolled", window.scrollY > 180);
+  }
+
   function productCard(product) {
     const category = categoryById(product.categoryId);
     const status = product.status || (product.available !== false ? "متوفر" : "غير موجود حاليا");
@@ -149,17 +159,28 @@
     }
   });
 
-  els.search?.addEventListener("input", (event) => {
-    state.query = event.target.value;
-    renderProducts();
+  els.searches.forEach((input) => {
+    input.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      syncSearchInputs(event.target);
+      renderProducts();
+    });
   });
 
-  els.clearSearch?.addEventListener("click", () => {
-    state.query = "";
-    if (els.search) els.search.value = "";
-    renderProducts();
-    els.search?.focus();
+  els.clearSearchButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.query = "";
+      syncSearchInputs();
+      renderProducts();
+      const formSearch = button.closest("form")?.querySelector("[data-search]");
+      formSearch?.focus();
+    });
   });
+
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  window.addEventListener("load", updateHeaderState);
+  window.addEventListener("pageshow", updateHeaderState);
+  updateHeaderState();
 
   init();
 })();
