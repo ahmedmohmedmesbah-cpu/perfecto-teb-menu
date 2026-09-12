@@ -132,7 +132,7 @@
       "price": 65.0,
       "basePrice": 260.0,
       "sellingPrice": 65.0,
-      "unit": "ربع كيلو",
+      "unit": "وحدة",
       "categoryId": "لانشون",
       "image": "",
       "available": true
@@ -143,7 +143,7 @@
       "price": 81.25,
       "basePrice": 325.0,
       "sellingPrice": 81.25,
-      "unit": "ربع كيلو",
+      "unit": "وحدة",
       "categoryId": "لانشون",
       "image": "",
       "available": true
@@ -154,7 +154,7 @@
       "price": 76.25,
       "basePrice": 305.0,
       "sellingPrice": 76.25,
-      "unit": "ربع كيلو",
+      "unit": "وحدة",
       "categoryId": "لانشون",
       "image": "",
       "available": true
@@ -165,7 +165,7 @@
       "price": 65.0,
       "basePrice": 260.0,
       "sellingPrice": 65.0,
-      "unit": "ربع كيلو",
+      "unit": "وحدة",
       "categoryId": "لانشون",
       "image": "",
       "available": true
@@ -176,7 +176,7 @@
       "price": 162.5,
       "basePrice": 650.0,
       "sellingPrice": 162.5,
-      "unit": "ربع كيلو",
+      "unit": "وحدة",
       "categoryId": "لانشون",
       "image": "",
       "available": true
@@ -198,7 +198,7 @@
       "price": 87.5,
       "basePrice": 350.0,
       "sellingPrice": 87.5,
-      "unit": "ربع كيلو",
+      "unit": "وحدة",
       "categoryId": "لانشون",
       "image": "",
       "available": true
