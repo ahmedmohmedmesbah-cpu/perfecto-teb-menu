@@ -18,7 +18,7 @@
   };
 
   const els = {
-    headerCategories: document.querySelector("[data-header-categories]"),
+    categoryContainers: Array.from(document.querySelectorAll("[data-header-categories], [data-hero-categories]")),
     products: document.querySelector("[data-products]"),
     searches: Array.from(document.querySelectorAll("[data-search]")),
     clearSearchButtons: Array.from(document.querySelectorAll("[data-clear-search]")),
@@ -48,11 +48,14 @@
   }
 
   function renderHeaderCategories() {
-    if (!els.headerCategories) return;
+    if (!els.categoryContainers.length) return;
 
     const allButton = headerCategoryLink({ id: "all", name: "كل المنتجات" });
     const categoryButtons = state.data.categories.map((category) => headerCategoryLink(category));
-    els.headerCategories.innerHTML = [allButton, ...categoryButtons].join("");
+    const markup = [allButton, ...categoryButtons].join("");
+    els.categoryContainers.forEach((container) => {
+      container.innerHTML = markup;
+    });
   }
 
   function headerCategoryLink(category) {
@@ -150,13 +153,15 @@
     }
   }
 
-  els.headerCategories?.addEventListener("click", (event) => {
-    const link = event.target.closest(".category-link");
-    if (link && link.dataset.categoryId) {
-      event.preventDefault();
-      state.activeCategory = link.dataset.categoryId;
-      render();
-    }
+  els.categoryContainers.forEach((container) => {
+    container.addEventListener("click", (event) => {
+      const link = event.target.closest(".category-link");
+      if (link && link.dataset.categoryId) {
+        event.preventDefault();
+        state.activeCategory = link.dataset.categoryId;
+        render();
+      }
+    });
   });
 
   els.searches.forEach((input) => {
