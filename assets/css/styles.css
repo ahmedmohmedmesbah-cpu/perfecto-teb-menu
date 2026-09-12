@@ -625,10 +625,11 @@ main {
     box-shadow: 0 5px 14px rgba(34, 34, 34, .18);
   }
 
-  .header-search {
+  .site-header .header-search {
     display: flex;
     order: 2;
     width: 100%;
+    height: 0;
     min-height: 0;
     max-height: 0;
     margin: 0;
@@ -637,22 +638,27 @@ main {
     overflow: hidden;
     transform: translateY(-8px) scale(.985);
     pointer-events: none;
+    visibility: hidden;
     box-shadow: 0 10px 24px rgba(34, 34, 34, .16);
     transition:
+      height .28s ease,
       max-height .28s ease,
       min-height .28s ease,
       padding .28s ease,
+      visibility .28s ease,
       opacity .2s ease,
       transform .28s ease;
   }
 
-  body.is-scrolled .header-search {
+  body.is-scrolled .site-header .header-search {
+    height: auto;
     min-height: 46px;
     max-height: 54px;
     padding: 5px 8px;
     opacity: 1;
     transform: translateY(0) scale(1);
     pointer-events: auto;
+    visibility: visible;
   }
 
   body.is-scrolled .site-header {
@@ -706,6 +712,10 @@ main {
 
   .search-panel {
     min-height: 58px;
+  }
+
+  .site-header .header-search {
+    min-height: 0;
   }
 
   .hero .search-panel {
@@ -874,11 +884,14 @@ main {
     border-radius: 14px;
   }
 
-  .header-search {
+  .site-header .header-search {
     border-radius: 14px;
+    height: 0;
+    min-height: 0;
   }
 
-  body.is-scrolled .header-search {
+  body.is-scrolled .site-header .header-search {
+    height: auto;
     min-height: 44px;
     max-height: 50px;
     padding: 5px 8px;
