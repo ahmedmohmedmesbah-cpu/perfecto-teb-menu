@@ -123,7 +123,7 @@
       "sellingPrice": 56.25,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/لانشون-فراخ.webp",
+      "image": "",
       "available": true
     },
     {
@@ -134,7 +134,7 @@
       "sellingPrice": 65.0,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/لانشون-فراخ-مدخن.webp",
+      "image": "",
       "available": true
     },
     {
@@ -145,7 +145,7 @@
       "sellingPrice": 81.25,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/لانشون-لحم-مشوي-علي-الفحم.webp",
+      "image": "",
       "available": true
     },
     {
@@ -167,7 +167,7 @@
       "sellingPrice": 65.0,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/بيفي.webp",
+      "image": "",
       "available": true
     },
     {
@@ -200,7 +200,7 @@
       "sellingPrice": 87.5,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/لانشون-سلامي.webp",
+      "image": "",
       "available": true
     },
     {

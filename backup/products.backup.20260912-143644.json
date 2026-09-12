@@ -167,7 +167,7 @@
       "sellingPrice": 65.0,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/بيفي.webp",
+      "image": "",
       "available": true
     },
     {
@@ -200,7 +200,7 @@
       "sellingPrice": 87.5,
       "unit": "ربع كيلو",
       "categoryId": "لانشون",
-      "image": "assets/images/products/لانشون-سلامي.webp",
+      "image": "",
       "available": true
     },
     {
