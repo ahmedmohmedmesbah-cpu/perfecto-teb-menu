@@ -719,7 +719,10 @@ main {
   }
 
   .hero-content {
-    width: calc(100% - 24px);
+    width: min(calc(100vw - 20px), 430px);
+    max-width: calc(100% - 20px);
+    min-width: 0;
+    overflow: hidden;
     padding: 126px 0 22px;
     transform: translateY(-8px);
   }
@@ -741,14 +744,20 @@ main {
 
   .hero h1 {
     font-size: clamp(1.55rem, 7vw, 2.2rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .hero p {
     margin: 10px auto 16px;
     font-size: .95rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .search-panel {
+    width: 100%;
+    max-width: 100%;
     min-height: 58px;
   }
 
@@ -762,7 +771,8 @@ main {
 
   .hero-category-nav {
     display: flex;
-    width: min(100%, 720px);
+    width: 100%;
+    max-width: 100%;
     margin: 10px auto 0;
     padding: 2px 0 4px;
     overflow-x: auto;
@@ -922,7 +932,8 @@ main {
   }
 
   .hero-content {
-    width: calc(100% - 20px);
+    width: min(calc(100vw - 18px), 430px);
+    max-width: calc(100% - 18px);
     padding-top: 116px;
     transform: translateY(-8px);
   }
@@ -938,7 +949,7 @@ main {
   }
 
   .hero h1 {
-    font-size: clamp(1.35rem, 7vw, 1.9rem);
+    font-size: clamp(1.24rem, 6.4vw, 1.78rem);
     line-height: 1.22;
   }
 
