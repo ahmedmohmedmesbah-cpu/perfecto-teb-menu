@@ -112,7 +112,14 @@ main {
   font-size: .86rem;
   font-weight: 800;
   white-space: nowrap;
-  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+  transition:
+    flex-basis .28s ease,
+    min-height .28s ease,
+    padding .28s ease,
+    transform .28s ease,
+    background .2s ease,
+    color .2s ease,
+    box-shadow .2s ease;
 }
 
 .contact-button:hover {
@@ -645,8 +652,8 @@ main {
   }
 
   body[data-index-page]:not(.is-scrolled) .site-header {
-    background: linear-gradient(180deg, rgba(34, 34, 34, .46), rgba(34, 34, 34, .06) 78%, transparent);
-    box-shadow: none;
+    background: rgba(173, 38, 60, .98);
+    box-shadow: 0 10px 24px rgba(34, 34, 34, .14);
   }
 
   .top-nav {
@@ -698,6 +705,7 @@ main {
     justify-content: flex-end;
     overflow-x: auto;
     scrollbar-width: none;
+    transition: gap .28s ease, transform .28s ease;
   }
 
   .header-actions::-webkit-scrollbar {
@@ -705,15 +713,25 @@ main {
   }
 
   body[data-index-page]:not(.is-scrolled) .header-actions {
-    justify-content: flex-start;
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .contact-button {
+    flex: 0 0 auto;
     min-height: 38px;
     padding: 7px 10px;
     background: rgba(255, 255, 255, .92);
     color: var(--red);
     box-shadow: 0 8px 18px rgba(34, 34, 34, .18);
+  }
+
+  body[data-index-page]:not(.is-scrolled) .contact-button {
+    flex: 1 1 0;
+    min-height: 40px;
+    padding: 7px 8px;
   }
 
   .contact-button.whatsapp {
