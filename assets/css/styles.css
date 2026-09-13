@@ -784,8 +784,10 @@ main {
     padding: 6px 12px;
     border-radius: 999px;
     font-size: .82rem;
-    background: rgba(255, 255, 255, .13);
+    background: var(--white);
+    color: var(--red);
     scroll-snap-align: start;
+    box-shadow: 0 8px 18px rgba(34, 34, 34, .16);
   }
 
   .category-link.active {
